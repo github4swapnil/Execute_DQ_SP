@@ -3,7 +3,7 @@ GO
 
 DECLARE	@return_value int
 
-EXEC	@return_value = [dbo].[SP_Utility_DQ_Test]
+EXEC	@return_value = [dbo].[SP_Utility_DQ]
 
 SELECT	'Return Value' = @return_value
 
