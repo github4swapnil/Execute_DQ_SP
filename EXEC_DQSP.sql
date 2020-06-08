@@ -12,3 +12,20 @@ select cast(HEALTHPLAN as char(10)) as HEALTHPLAN, cast(TABLENAME as char(10)) a
 
 GO
 
+SET ECHO OFF
+
+                SET PAGESIZE 50000
+
+                SET MARKUP HTML ON TABLE ""
+                
+                
+                --Format the columns
+
+                COLUMN employee_name HEADING "Employee Name"
+
+                COLUMN project_name HEADING "Project Name"
+
+                SET FEEDBACK OFF
+                
+                SET TERMOUT OFF
+
