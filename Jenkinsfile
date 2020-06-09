@@ -10,9 +10,9 @@ pipeline {
       stage('Execute Stored Procedure')
       {
           steps{
-              bat label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" >> output.html
-                sqlcmd -H SwapnilN-MSD1 -E -S . -d QACOP -i "%%G"  >> output.html
-                echo ---------------------------------- >>output.html 
+              bat label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" >> output.txt
+                sqlcmd -H SwapnilN-MSD1 -E -S . -d QACOP -i "%%G"  >> output.txt
+                echo ---------------------------------- >>output.txt 
                 
                 
                 
