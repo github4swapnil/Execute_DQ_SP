@@ -4,7 +4,7 @@ pipeline {
    stages {
       stage('Git Clone') {
          steps {             
-              url: 'https://github.com/github4swapnil/Execute_DQ_SP.git'
+              git url: 'https://github.com/github4swapnil/Execute_DQ_SP.git'
          }
       }
       stage('Execute Stored Procedure')
