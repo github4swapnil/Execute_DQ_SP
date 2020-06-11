@@ -19,7 +19,7 @@ pipeline {
                        done
                 ''' 
              
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: 'C:\\Users\\swapniln\\.jenkins\\workspace\\ExecuteDQ_SP', reportFiles: 'output.html', reportName: 'HTML Report', reportTitles: ''])              
+               
               
               
               
