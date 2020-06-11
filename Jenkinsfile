@@ -10,15 +10,15 @@ pipeline {
       stage('Execute Stored Procedure')
       {
           steps{
-              bat label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" >> output.txt
-                sqlcmd -H SwapnilN-MSD1 -E -S . -d QACOP -i "%%G"  >> output.txt
-                echo ---------------------------------- >>output.txt 
-                
-                
-                
-                )'''
-                
-              
+              sh label: '', script: 
+                '''for sql_file in *.sql 
+                        do 
+                           echo "${sql_file}" 
+                           /opt/mssql-tools/bin/sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -U swapniln -P swapnilqacop -i "${sql_file}" >> output.txt
+                           echo ---------------------------------- >>output.txt 
+                       done
+                ''' 
+             
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: 'C:\\Users\\swapniln\\.jenkins\\workspace\\ExecuteDQ_SP', reportFiles: 'output.html', reportName: 'HTML Report', reportTitles: ''])              
               
               
