@@ -46,3 +46,8 @@ GO
 select cast(HEALTHPLAN as char(10)) as HEALTHPLAN, cast(FILENAME as char(20)) as FILENAME, cast(SRC_RECORD_CNT as char(10)) as SRC_RECORD_CNT, cast(TRG_RECORD_CNT as char(10)) as TRG_RECORD_CNT, cast(SOURCE_Minus_TARGET as char(10)) as SOURCE_Minus_TARGET, cast(TARGET_Minus_SOURCE as char(10)) as TARGET_Minus_SOURCE, cast(STATUS as char(10)) as STATUS,  cast(STATUS_DESC as char(250)) as STATUS_DESC from SP_Utility_Ingestion_Compare_OUTPUT
 
 GO
+
+
+SELECT '************************************************END OF REPORT*****************************************************************************'
+
+GO
